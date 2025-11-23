@@ -1,13 +1,14 @@
-glad library!
+gl library!
 
 This repository includes all essential specifications and all their extensions!
-But, it doesn't include any loaders.
+I've generated it using glad2, and then added doxygen comments to `gl.h`
 
- gl -> core profile -> 4.6
-egl -> 1.5
-glx -> 1.4
-wgl -> 1.0
+gl 4.6 (core profile)
+egl 1.5
+glx 1.4
+wgl 1.0
 
 https://dav1d.de/
 https://gen.glad.sh/
 https://www.khronos.org/
+https://github.com/Rinzii/glad-doxygen/
