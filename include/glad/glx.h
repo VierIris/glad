@@ -14,6 +14,7 @@
 #include <glad/gl.h>
 
 #define GLAD_GLX
+#define GLAD_OPTION_GLX_LOADER
 
 #ifdef __cplusplus
 extern "C" {
@@ -1136,7 +1137,13 @@ GLAD_API_CALL PFNGLXWAITXPROC glad_glXWaitX;
 GLAD_API_CALL int gladLoadGLXUserPtr(Display *display, int screen, GLADuserptrloadfunc load, void *userptr);
 GLAD_API_CALL int gladLoadGLX(Display *display, int screen, GLADloadfunc load);
 
+#ifdef GLAD_GLX
 
+GLAD_API_CALL int gladLoaderLoadGLX(Display *display, int screen);
+
+GLAD_API_CALL void gladLoaderUnloadGLX(void);
+
+#endif
 #ifdef __cplusplus
 }
 #endif

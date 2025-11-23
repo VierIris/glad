@@ -5,6 +5,7 @@
 #include <glad/gl.h>
 
 #define GLAD_WGL
+#define GLAD_OPTION_WGL_LOADER
 
 #ifdef __cplusplus
 extern "C" {
@@ -984,7 +985,11 @@ GLAD_API_CALL PFNWGLWAITFORSBCOMLPROC glad_wglWaitForSbcOML;
 GLAD_API_CALL int gladLoadWGLUserPtr(HDC hdc, GLADuserptrloadfunc load, void *userptr);
 GLAD_API_CALL int gladLoadWGL(HDC hdc, GLADloadfunc load);
 
+#ifdef GLAD_WGL
 
+GLAD_API_CALL int gladLoaderLoadWGL(HDC hdc);
+
+#endif
 #ifdef __cplusplus
 }
 #endif
